@@ -1,0 +1,62 @@
+@import '../../styles/_base.scss';
+
+.landing {
+  display: grid;
+  grid-template-areas:
+  'cta_panel example_panel';
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: 100vh;
+}
+
+@media #{$medium-and-down} {
+  .landing {
+    grid-template-areas:
+    'cta_panel'
+    'example_panel';
+    grid-template-columns: 100vw;
+    grid-template-rows: none;
+  }
+}
+
+.ctaPanel {
+  align-items: center;
+  background-color: $main-color;
+  display: flex;
+  flex-direction: column;
+  grid-area: cta_panel;
+  justify-content: center;
+  padding: rem(40px);
+  color: $light-color;
+}
+
+.logoWrapper {
+  height: 25%;
+  margin: rem(20px);
+  max-height: rem(200px);
+  min-height: rem(128px);
+}
+
+.logo {
+  @extend %img-responsive;
+}
+
+.catchPhrase {
+  color: $light-color;
+  font-size: $h6-fontsize;
+  font-weight: $weight-s;
+  margin: rem(20px) 0;
+  text-align: center;
+}
+
+.ctaButton {
+  background-color: $secondary-color;
+  border-radius: $border-radius;
+  font-weight: $weight-xl;
+  margin: rem(20px) 0;
+  padding: $margin-xl $margin-xxxl;
+}
+
+.examplePanel {
+  background-color: white;
+  grid-area: example_panel;
+}

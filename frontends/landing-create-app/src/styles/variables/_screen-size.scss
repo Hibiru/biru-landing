@@ -1,0 +1,40 @@
+$smallest: 320px;
+$small: 510px;
+$medium: 767px; //ipad
+$large: 911px;
+$xlarge: 1216px;
+$xxlarge: 1472px;
+
+// Media Query Ranges
+$small-screen-up: $small + 1px !default;
+$medium-screen-up: $medium + 1px !default;
+$large-screen-up: $large + 1px !default;
+$xlarge-screen-up: $xlarge + 1px !default;
+$xxlarge-screen-up: $xxlarge + 1px !default;
+
+$small-screen: $small !default;
+$medium-screen: $medium !default;
+$large-screen: $large !default;
+$xlarge-screen: $xlarge !default;
+$xxlarge-screen: $xxlarge !default;
+
+$medium-and-up: 'only screen and (min-width : #{$small-screen-up})' !default;
+$large-and-up: 'only screen and (min-width : #{$medium-screen-up})' !default;
+$xlarge-and-up: 'only screen and (min-width : #{$large-screen-up})' !default;
+$xxlarge-and-up: 'only screen and (min-width : #{$xlarge-screen-up})' !default;
+
+$small-and-down: 'only screen and (max-width : #{$small-screen})' !default;
+$medium-and-down: 'only screen and (max-width : #{$medium-screen})' !default;
+$large-and-down: 'only screen and (max-width : #{$large-screen})' !default;
+$xlarge-and-down: 'only screen and (max-width : #{$xlarge-screen})' !default;
+$xxlarge-and-down: 'only screen and (max-width : #{$xxlarge-screen})' !default;
+
+$medium-only: 'only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})' !default;
+$large-only: 'only screen and (min-width : #{$medium-screen-up}) and (max-width : #{$large-screen})' !default;
+$xlarge-only: 'only screen and (min-width : #{$large-screen-up}) and (max-width : #{$xlarge-screen})' !default;
+
+
+@function custom-media-and-up($value) {
+  $custom-size: $value * $main-unit;
+  @return 'only screen and (min-width : #{$custom-size})';
+}

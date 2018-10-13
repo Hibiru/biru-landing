@@ -1,0 +1,91 @@
+html {
+  line-height: 1.5;
+  color: #000000;
+  font-family: 'Avenir next', 'Roboto', 'Helvetica', sans-serif;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: $light-gray;
+
+  // Gets rid of tap active state
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: 'Avenir next', 'Roboto', 'Helvetica', sans-serif;
+}
+
+::-webkit-input-placeholder {
+  color: $light-gray;
+  font-family: 'Avenir next', 'Roboto', 'Helvetica', sans-serif;
+}
+
+:-moz-placeholder {
+  opacity: 1;
+  color: $light-gray;
+  font-family: 'Avenir next', 'Roboto', 'Helvetica', sans-serif;
+}
+
+::-moz-placeholder {
+  opacity: 1;
+  color: $light-gray;
+  font-family: 'Avenir next', 'Roboto', 'Helvetica', sans-serif;
+}
+
+:-ms-input-placeholder {
+  color: $light-gray;
+  font-family: 'Avenir next', 'Roboto', 'Helvetica', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  font-family: 'Avenir next', 'Roboto', 'Helvetica', sans-serif;
+  font-weight: 400;
+}
+
+// Header Styles
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-weight: inherit;
+}
+// sass-lint:disable brace-style property-sort-order
+h1 { font-size: $h1-fontsize; line-height: 110%; margin: ($h1-fontsize / 2) 0 ($h1-fontsize / 2.5);}
+h2 { font-size: $h2-fontsize; line-height: 110%; margin: ($h2-fontsize / 2) 0 ($h2-fontsize / 2.5);}
+h3 { font-size: $h3-fontsize; line-height: 110%; margin: ($h3-fontsize / 2) 0 ($h3-fontsize / 2.5);}
+h4 { font-size: $h4-fontsize; line-height: 110%; margin: ($h4-fontsize / 2) 0 ($h4-fontsize / 2.5);}
+h5 { font-size: $h5-fontsize; line-height: 110%; margin: ($h5-fontsize / 2) 0 ($h5-fontsize / 2.5);}
+h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 2) 0 ($h6-fontsize / 2.5);}
+// sass-lint:enable brace-style property-sort-order
+
+// Text Styles
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: $weight-l;
+}
+
+small {
+  font-size: 75%;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px $light-gray--transparent solid;
+  width: 100%;
+}
