@@ -21,12 +21,12 @@
 .ctaPanel {
   align-items: center;
   background-color: $main-color;
+  color: $light-color;
   display: flex;
   flex-direction: column;
   grid-area: cta_panel;
   justify-content: center;
   padding: rem(40px);
-  color: $light-color;
 }
 
 .logoWrapper {
@@ -51,12 +51,59 @@
 .ctaButton {
   background-color: $secondary-color;
   border-radius: $border-radius;
+  box-shadow: 0 6px 15px 6px rgba(0, 0, 0, 0.08);
   font-weight: $weight-xl;
   margin: rem(20px) 0;
   padding: $margin-xl $margin-xxxl;
 }
 
-.examplePanel {
+.messagingPanel {
   background-color: white;
+  display: flex;
+  flex-direction: column;
   grid-area: example_panel;
+  padding: $margin-xxl;
+}
+
+%messageBubble {
+  margin: $margin-m;
+  padding: $margin-l $margin-xxl;
+}
+
+$messageBubbleRadius_big: rem(15px);
+$messageBubbleRadius_small: rem(4px);
+
+.messageRow {
+  display: flex;
+  margin: $margin-s 0;
+  max-width: 75%;
+}
+
+.messageRow:nth-child(even) {
+  align-self: flex-end;
+}
+
+.messageBubble_left {
+  @extend %messageBubble;
+  background-color: $main-color;
+  border-radius:
+    $messageBubbleRadius_big $messageBubbleRadius_big
+    $messageBubbleRadius_big $messageBubbleRadius_small;
+  color: $light-color;
+}
+
+.messageBubble_right {
+  @extend %messageBubble;
+  background-color: $dark-gray;
+  border-radius:
+    $messageBubbleRadius_big $messageBubbleRadius_big
+    $messageBubbleRadius_small $messageBubbleRadius_big;
+  color: $gray;
+}
+
+.ctaBubble {
+  @extend %messageBubble;
+  border: 2px solid $main-color;
+  border-radius: rem(30px);
+  color: $main-color;
 }
