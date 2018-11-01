@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import logo from './logo.png';
 import Emoji from '../Emoji';
 import DeviceOriented from '../DeviceOriented';
-import Tilt from 'react-tilt'
+import Caroussel from './Caroussel'
 
 import styles from './Landing.module.scss';
 
@@ -14,7 +14,7 @@ class Landing extends Component {
         <div className={styles.ctaPanel}>
           <div className={styles.logoWrapper}>
             <DeviceOriented>
-              <img src={logo} className={styles.logo} alt="logo-biry" />
+              <img src={logo} className={styles.logo} alt="logo-biru" />
             </DeviceOriented>
           </div>
           <h6 className={styles.catchPhrase}>
@@ -25,46 +25,41 @@ class Landing extends Component {
           </button>
         </div>
         <div className={styles.messagingPanel}>
-          <div className={styles.messageRow}>
+          <div className={styles.messageRow_left}>
             <div className={styles.messageBubble_left}>
               Hello toi ! <Emoji label="Coucou" children="👋" />
               <br />
               moi c’est Biru, le chatbot qui t’aide à trouver les bars sympas autour de toi
             </div>
           </div>
-          <div className={styles.messageRow}>
+          <div className={styles.messageRow_right}>
             <div className={styles.messageBubble_right}>
               Cool <Emoji label="Cool" children="🤘" />
               <br />
               Mais…commet ça marche ?
             </div>
           </div>
-          <div className={styles.messageRow}>
+          <div className={styles.messageRow_left}>
             <div className={styles.messageBubble_left}>
               Partage ta position ou donne moi une station de métro et je m’occupe du reste 🕵️‍♀️
             </div>
           </div>
-          <div className={styles.messageRow}>
+          <div className={styles.messageRow_right}>
             <div className={styles.ctaBubble}>
               Je partage ma position !
             </div>
           </div>
-          <div className={styles.messageRow}>
+          <div className={styles.messageRow_left}>
             <div className={styles.messageBubble_left}>
               Regarde ce que je t’ai trouvé :
             </div>
           </div>
-
-
-          <Tilt className="Tilt" options={{ max : 25 }} style={{ height: 250, width: 250 }} >
-            <img src={logo} className={styles.logo} alt="logo-biry" />
-          </Tilt>
-
-          <div className="your-element" data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500">
-            Hello
+          <Caroussel />
+          <div className={styles.messageRow_right}>
+            <div className={styles.messageBubble_right}>
+              <Emoji label="Cool" children="😍" />
+            </div>
           </div>
-
-
         </div>
       </div>
     );

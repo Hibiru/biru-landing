@@ -1,0 +1,25 @@
+@import '../Landing.module';
+
+.caroussel {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  border: 1px solid #ececec;
+  border-radius: $message-bubble-radius-big;
+  max-width: rem(250px);
+  height: fit-content;
+  overflow: hidden;
+}
+
+.cardText {
+  margin: $margin-m;
+}
+
+.cardTitle {
+  margin: $margin-m 0;
+  font-weight: $weight-xl;
+}
