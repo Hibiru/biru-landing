@@ -14,7 +14,12 @@ class Landing extends Component {
         <div className={styles.ctaPanel}>
           <div className={styles.logoWrapper}>
             <DeviceOriented>
-              <img src={logo} className={styles.logo} alt="logo-biru" />
+              <img
+                style={{ willChange: 'transform', filter: "drop-shadow(0 20px 30px rgba(51, 51, 51, 0.5))"}}
+                src={logo}
+                className={styles.logo}
+                alt="logo-biru"
+              />
             </DeviceOriented>
           </div>
           <h6 className={styles.catchPhrase}>
