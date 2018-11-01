@@ -3,18 +3,21 @@ import React, { Component } from 'react';
 import logo from './logo.png';
 import Emoji from '../Emoji';
 import DeviceOriented from '../DeviceOriented';
-import Tilt from 'react-tilt'
 
 import styles from './Landing.module.scss';
 
 class Landing extends Component {
+  componentDidMount() {
+   
+  }
+
   render() {
     return (
       <div className={styles.landing}>
         <div className={styles.ctaPanel}>
           <div className={styles.logoWrapper}>
             <DeviceOriented>
-              <img src={logo} className={styles.logo} alt="logo-biry" />
+              <img style={{ willChange: 'transform', filter: "drop-shadow(0 20px 30px rgba(51, 51, 51, 0.5))"}} src={logo} className={styles.logo} alt="logo-biry" />
             </DeviceOriented>
           </div>
           <h6 className={styles.catchPhrase}>
@@ -54,16 +57,6 @@ class Landing extends Component {
               Regarde ce que je t’ai trouvé :
             </div>
           </div>
-
-
-          <Tilt className="Tilt" options={{ max : 25 }} style={{ height: 250, width: 250 }} >
-            <img src={logo} className={styles.logo} alt="logo-biry" />
-          </Tilt>
-
-          <div className="your-element" data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500">
-            Hello
-          </div>
-
 
         </div>
       </div>

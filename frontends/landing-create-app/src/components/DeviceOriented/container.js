@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import styles from './DeviceOriented.module.scss';
 
 class DeviceOriented extends Component {
   constructor(props) {
@@ -63,22 +64,17 @@ class DeviceOriented extends Component {
         borne2: Math.round(borne2),
       });
       this.deviceRef.current.style.transform =
-      ` rotateZ(${newAlpha}deg)`;
-      // `rotateX(${(newBeta)}deg)` +
-      // ` rotateY(${newGamma}deg)`;
-      // if (this.formerApliedAlpha !== newAlpha) {
-      // }
-      // this.formerApliedAlpha = newAlpha;
-        // ` rotateY(${this.gamma - event.gamma / 3}deg)`;
-        // ` rotateZ(${this.alpha - event.alpha / 3}deg)`;
+      `rotateX(${(newBeta)}deg)` +
+       ` rotateY(${newGamma}deg)`;
     });
+
     this.state = {
       initialBeta: null,
-      eventBeta: null,
       newBeta: null,
       initialGamma: null,
-      eventGamma: null,
+      eventBeta: null,
       newGamma: null,
+      eventGamma: null,
       initialAlpha: null,
       eventAlpha: null,
       newAlpha: null,
@@ -97,7 +93,6 @@ class DeviceOriented extends Component {
     console.log('initialAlpha', initialAlpha)
     console.log('eventAlpha', eventAlpha)
     console.log('newAlpha', newAlpha)
-    console.log('')
     return (
       <Fragment>
         {/* initialBeta: {initialBeta}
@@ -106,6 +101,7 @@ class DeviceOriented extends Component {
         <br/>
         newBeta: {newBeta}
         <br/> */}
+        {/* <div style={{ position: 'absolute', top:'0', left:'0' }}>
         initialAlpha: {initialAlpha}
         <br/>
         eventAlpha: {eventAlpha}
@@ -117,6 +113,7 @@ class DeviceOriented extends Component {
         newAlpha2: {newAlpha2} | {borne2 ? `borne2: ${borne2}` : ''}
         <br/>
         <br/>
+      </div> */} 
         {/* initialGamma: {initialGamma}
         <br/>
         eventGamma: {eventGamma}
