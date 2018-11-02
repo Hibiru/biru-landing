@@ -25,8 +25,22 @@ class Landing extends Component {
           <h6 className={styles.catchPhrase}>
             "Hello ! Je suis un chatbot qui vas t'aider à trouver <strong>les meilleurs bars</strong> autour de toi ! <Emoji label="Bière">🍻</Emoji>"
           </h6>
+          <div className={styles.valueProp}>
+            <div className={styles.valuePropItem}>
+              <div className={styles.emoji}><Emoji label="force">💪</Emoji></div>
+              <p>Easily find great spots near you</p>
+            </div>
+            <div className={styles.valuePropItem}>
+              <div className={styles.emoji}><Emoji label="clique">👨‍👩‍👧‍👦</Emoji></div>
+              <p>Share it with your friends group</p>
+            </div>
+            <div className={styles.valuePropItem}>
+              <div className={styles.emoji}><Emoji label="Bière">🍻</Emoji></div>
+              <p>Vote for the best one </p>
+            </div>
+          </div>
           <button className={styles.ctaButton}>
-            Viens discuter! <Emoji label="Feu" children="🔥" />
+            Viens on discute! <Emoji label="Feu" children="🔥" />
           </button>
         </div>
         <div className={styles.messagingPanel}>
