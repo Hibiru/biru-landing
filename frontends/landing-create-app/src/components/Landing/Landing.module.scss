@@ -4,9 +4,8 @@
   display: grid;
   grid-template-areas:
   'cta_panel example_panel';
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 100%;
-  min-height: 100vh;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: 100vh;
 }
 
 @media #{$medium-and-down} {
@@ -40,16 +39,7 @@
 .logo {
   @extend %img-responsive;
   max-height: rem(200px);
-
-  .logo::after {
-    display: block;
-    position: relative;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
-    width: 100%;
-    content: '';
-  }
 }
-
 
 
 .catchPhrase {
@@ -75,19 +65,21 @@
 
 .messagingPanel {
   display: flex;
+  overflow: scroll;
   flex-direction: column;
   background-color: white;
-  padding: $margin-xxl;
   grid-area: example_panel;
+  padding: rem(40px) 0;
 }
 
 %message-bubble {
   margin: $margin-m;
   cursor: default;
   padding: $margin-l $margin-xxl;
+  box-shadow: 0 5px 30px 6px rgba(0, 0, 0, 0.05);
 }
 
-%message-bubble:hover {
+%message-bubble{
   animation: float 2s ease-in-out infinite;
 }
 
@@ -103,11 +95,15 @@ $message-bubble-radius-small: rem(4px);
 
 .messageRow_left {
   @extend %message-row;
+  padding-left: $margin-xxl;
+  animation: float 2s ease-in-out infinite;
 }
 
 .messageRow_right {
   @extend %message-row;
+  padding-right: $margin-xxl;
   align-self: flex-end;
+  animation: float 2s ease-in-out .5s infinite;
 }
 
 .messageBubble_left {
@@ -115,8 +111,9 @@ $message-bubble-radius-small: rem(4px);
   border-radius:
   $message-bubble-radius-big $message-bubble-radius-big
   $message-bubble-radius-big $message-bubble-radius-small;
-  background-color: $main-color;
-  color: $light-color;
+  background-color: $light-color;
+  border: 1px solid $light-gray;
+  color: $dark-gray;
 }
 
 .messageBubble_right {
@@ -124,8 +121,9 @@ $message-bubble-radius-small: rem(4px);
   border-radius:
   $message-bubble-radius-big $message-bubble-radius-big
   $message-bubble-radius-small;
-  background-color: $dark-gray;
-  color: $gray;
+  background-color: $main-color;
+  border: 1px solid $darker-main-color;
+  color: $light-color;
 }
 
 .ctaBubble {

@@ -1,25 +1,41 @@
+@import '../../../styles/_base';
 @import '../Landing.module';
+
 
 .caroussel {
   display: flex;
+  flex-shrink: 0;
+  padding-left: $margin-xxl;
+  margin-left: rem(8px);
+  overflow-y: scroll;
+  color: $dark-gray;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  border: 1px solid #ececec;
+  border: 1px solid $light-gray;
   border-radius: $message-bubble-radius-big;
   max-width: rem(250px);
   height: fit-content;
   overflow: hidden;
+  margin-right: 15px;
+  animation: float 2s ease-in-out infinite;
+
+  & > img {
+    border-radius: 0.9375rem 0.9375rem 0.5rem 0.5rem;
+    padding: 5px;
+  }
+
 }
 
 .cardText {
-  margin: $margin-m;
+  margin: rem(5px) $margin-l rem(15px) $margin-l;
+  font-size: rem(12px);
 }
 
 .cardTitle {
-  margin: $margin-m 0;
+  margin-bottom: $margin-s; 
   font-weight: $weight-xl;
 }
